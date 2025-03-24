@@ -78,9 +78,8 @@
   
 import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.bundle.min';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js.map';
 import React from "react";
-import Link from "next/link";
   
 interface NavBarProps {
   imageSrcPath: string;
@@ -101,27 +100,35 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath, navItems }) => {
           />
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler navbar-dark"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarResponsive"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-        <span className="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarResponsive">
-          <ul className="navbar-nav text-uppercase ms-auto">
-            {navItems.map((item, index) => (
-              <li key={index} className="nav-item">
-                <Link className="nav-link" href={`/${item.toLowerCase()}`}>
-                  {item}
-                </Link>
-              </li>
-            ))}
+        <div className="navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav text-uppercase ml-auto">
+            <li className="nav-item">
+              <a className="nav-link" href="/sections/about" style={{color: "white"}}>About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/sections/competition" style={{color: "white"}}>Competition</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/sections/blog" style={{color: "white"}}>Blog</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/sections/contact" style={{color: "white"}}>Contact</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/sections/join" style={{color: "white"}}>Join</a>
+            </li>
           </ul>
-        </div>
+        </div> 
       </div>
     </nav>
   );
