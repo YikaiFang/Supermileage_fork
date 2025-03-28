@@ -5,7 +5,6 @@ import Link from "next/link";
 
 
 export default function Home() {
-  const navItems = ["About", "Competition", "Blog", "Contact", "Join"]
   return (
     <div>
       {/* <h1>Welcome to the Landing Page</h1> */}
