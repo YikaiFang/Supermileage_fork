@@ -1,25 +1,44 @@
 "use client";
 import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from "react";
+import React, { useEffect, useState } from "react";
+// import 'css/components/Navbar.css';
   
 interface NavBarProps {
   imageSrcPath: string;
-  navItems: string[];
 }
 
-const Navbar: React.FC<NavBarProps> = ({imageSrcPath, navItems }) => {
+const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-black shadow">
-      <div className="container-fluid">
+    <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolling ? "navbar-solid" : "navbar-transparent"}`}>
+      <div className="container">
         <a className="navbar-brand">
-          <Image
-            src={imageSrcPath}
-            width="150"
-            height="150"
-            className="d-inline-block align-center"
-            alt="Brand Logo"
-          />
+          <div className="logo-container">
+            <Image
+              src={imageSrcPath}
+              width="200"
+              height="200"
+              className="d-inline-block align-center"
+              alt="Brand Logo"
+            />
+          </div>
         </a>
         <button
           className="navbar-toggler navbar-dark"

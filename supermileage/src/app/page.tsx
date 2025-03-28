@@ -1,3 +1,4 @@
+"use client"
 import Header from "tsx/Header";
 import Image from "next/image";
 import Footer from "tsx/Footer";
@@ -5,14 +6,32 @@ import Link from "next/link";
 
 
 export default function Home() {
+
   return (
     <div>
-      {/* <h1>Welcome to the Landing Page</h1> */}
-      {/* <Link href="/sections/about">Go to About <br/><br/></Link>
-      <Link href="/sections/contact">Go to Contact</Link> */}
       <Header/>
-      {/* <Image src="/media/images/default.jpg" alt="" width={1000} height={1000}/> */}
+      <header
+        className="relative h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/media/images/fb_cover.jpg')" }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
+
+        {/* Content */}
+        <img
+          src="/media/images/ubc-logo.svg"
+          alt="UBC logo"
+          className="relative z-10"
+          style={{ height: "75px", marginBottom: "25px" }}
+        />
+        <h1 className="relative z-10 text-6xl font-bold text-white drop-shadow-lg">
+          SUPERMILEAGE
+        </h1>
+        <p className="relative z-10 text-xl italic text-white drop-shadow-md">
+          in the pursuit of efficiency
+        </p>
+        <a className="relative z-10 btn btn-primary mt-4">Learn More</a>
+      </header>
     </div>
   );
-}
-
+};
