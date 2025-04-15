@@ -3,6 +3,11 @@ import Header from "tsx/Header";
 import Image from "next/image";
 import Footer from "tsx/Footer";
 import Link from "next/link";
+import Hero from "tsx/Hero";
+import About from "tsx/About";
+import Cars from "tsx/Cars";
+import Sponsors from "tsx/Sponsors";
+
 
 
 export default function Home() {
@@ -32,7 +37,6 @@ export default function Home() {
         </p>
         <a className="relative z-10 btn btn-primary mt-4">Learn More</a>
       </header>
-      <Footer/>
     </div>
   );
 };
