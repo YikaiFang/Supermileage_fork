@@ -37,6 +37,19 @@ export default function Home() {
         </p>
         <a className="relative z-10 btn btn-primary mt-4">Learn More</a>
       </header>
+      <main>
+        <section id="about">
+          <About />
+        </section>
+
+        <section id="cars">
+          <Cars />
+        </section>
+
+        <section id="sponsors">
+          <Sponsors />
+        </section>
+      </main>
     </div>
   );
 };
