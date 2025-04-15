@@ -32,6 +32,7 @@ export default function Home() {
         </p>
         <a className="relative z-10 btn btn-primary mt-4">Learn More</a>
       </header>
+      <Footer/>
     </div>
   );
 };

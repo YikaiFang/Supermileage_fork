@@ -54,22 +54,22 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
         <div className="navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav text-uppercase ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="/sections/about" style={{color: "white"}}>About</a>
+              <a className="nav-link white" href="/sections/about">About</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/sections/competition" style={{color: "white"}}>Competition</a>
+              <a className="nav-link white" href="/sections/competition">Competition</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/sections/blog" style={{color: "white"}}>Blog</a>
+              <a className="nav-link white" href="/sections/blog">Blog</a>
+            </li>
+            <li className="nav-item white">
+              <a className="nav-link white" href="/sections/contact">Contact</a>
+            </li>
+            <li className="nav-item hover:text-red-50">
+              <a className="nav-link white" href="/sections/join">Join</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/sections/contact" style={{color: "white"}}>Contact</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/sections/join" style={{color: "white"}}>Join</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="/sections/sponsor" style={{color : "white"}}>Sponsor</a>
+                <a className="nav-link white" href="/sections/sponsor">Sponsor</a>
             </li>
           </ul>
         </div> 
