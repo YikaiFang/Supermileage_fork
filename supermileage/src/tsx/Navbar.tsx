@@ -13,7 +13,7 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 200) {
         setScrolling(true);
       } else {
         setScrolling(false);
@@ -27,7 +27,7 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
   }, []);
   
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolling ? "navbar-solid" : "navbar-transparent"}`}>
+    <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolling ? "bg-dark" : "navbar-transparent"}`}>
       <div className="container">
         <a className="navbar-brand">
           <div className="logo-container">
@@ -44,14 +44,14 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
           className="navbar-toggler navbar-dark"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
+          data-bs-target="#navbarToggleExternalContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="navbar-collapse" id="navbarSupportedContent">
+        <div className="navbar-collapse" id="navbarToggleExternalContent">
           <ul className="navbar-nav text-uppercase ml-auto">
             <li className="nav-item">
               <a className="nav-link white" href="/sections/about">About</a>

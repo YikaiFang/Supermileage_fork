@@ -19,10 +19,8 @@ export default function Home() {
         className="relative h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
         style={{ backgroundImage: "url('/media/images/fb_cover.jpg')" }}
       >
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
 
-        {/* Content */}
         <img
           src="/media/images/ubc-logo.svg"
           alt="UBC logo"
