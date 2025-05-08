@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <div>
       <Header/>
+      <section>
       <header
         className="relative h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
         style={{ backgroundImage: "url('/media/images/fb_cover.jpg')" }}
@@ -33,10 +34,13 @@ export default function Home() {
         <p className="relative z-10 text-xl italic text-white drop-shadow-md">
           in the pursuit of efficiency
         </p>
-        <a className="relative z-10 btn btn-primary mt-4">Learn More</a>
+        <a className="relative z-10 btn btn-primary mt-4" href="#about">Learn More</a>
       </header>
-      <main>
-        <section id="about">
+      </section>
+
+      <section>
+      <main id="about">
+        <section id="About">
           <About />
         </section>
 
@@ -48,6 +52,9 @@ export default function Home() {
           <Sponsors />
         </section>
       </main>
+      </section>
+
+      <Footer/>
     </div>
   );
 };

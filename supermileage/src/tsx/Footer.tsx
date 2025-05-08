@@ -1,33 +1,29 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function Footer() {
     return (
         <footer className="bg-light footer">
-            <div className="container">
+            <div className="container-xxl">
                 <div className="row align-items-center">
-                    <div className="col-md-5">
+                    <div className="col-md-6">
                         <span className="copyright">Copyright &copy; Supermileage 2025</span>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 align-self-center">
                         <ul className="list-inline social-buttons">
                             <li className="list-inline-item">
-                                <a href="https://www.facebook.com/ubcst/" className="inline-flex rounded-full w-5 h-5 bg-blue-500 items-center justify-center">
-                                    <i className="fab fa-facebook-f" ></i>
+                                <a href="https://www.instagram.com/ubcsupermileage/" className="social-icon bg-dark d-flex justify-content-center hover:bg-blue-500">
+                                    <i className="bi bi-instagram"></i>
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a href="https://www.instagram.com/ubcsupermileage/">
-                                    <i className="fab fa-instagram"></i>
+                                <a href="https://www.linkedin.com/company/ubc-supermileage/about/" className="social-icon bg-dark d-flex justify-content-center hover:bg-blue-500">
+                                    <i className="bi bi-linkedin"></i>
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a href="https://www.linkedin.com/company/ubc-supermileage/about/">
-                                    <i className="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                            <li className="list-inline-item">
-                                <a href="https://www.youtube.com/user/UBCSupermileageTeam">
-                                    <i className="fab fa-youtube"></i>
+                                <a href="https://www.youtube.com/user/UBCSupermileageTeam" className="social-icon bg-dark d-flex justify-content-center hover:bg-blue-500">
+                                    <i className="bi bi-youtube"></i>
                                 </a>
                             </li>
                         </ul>

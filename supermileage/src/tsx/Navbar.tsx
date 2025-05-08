@@ -2,7 +2,6 @@
 import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from "react";
-// import 'css/components/Navbar.css';
   
 interface NavBarProps {
   imageSrcPath: string;
@@ -12,6 +11,11 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
+
+    import('bootstrap/dist/js/bootstrap.bundle.min.js').catch(err =>
+      console.error("Failed to load Bootstrap JS:", err)
+    );
+
     const handleScroll = () => {
       if (window.scrollY > 200) {
         setScrolling(true);
@@ -20,16 +24,22 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      setScrolling(window.scrollY > 200);
+      window.addEventListener("scroll", handleScroll);
+    }
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
   
   return (
     <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolling ? "bg-dark" : "navbar-transparent"}`}>
       <div className="container">
-        <a className="navbar-brand">
+        <a className="navbar-brand" href="/">
           <div className="logo-container">
             <Image
               src={imageSrcPath}
@@ -40,6 +50,7 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
             />
           </div>
         </a>
+
         <button
           className="navbar-toggler navbar-dark"
           type="button"

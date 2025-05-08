@@ -18,7 +18,7 @@ export default function About() {
             </div>
           </div>
           <div className="mt-8 text-center text-gray-500">
-            Learn more about our history <a href="/about" className="text-blue-600 hover:underline">here</a>.
+            Learn more about our history <a href="/sections/about" className="text-blue-600 hover:underline">here</a>.
           </div>
         </div>
       </section>

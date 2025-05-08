@@ -37,3 +37,11 @@
     }
   }
 }
+
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar.transparent {
+  background-color: transparent;
+}
