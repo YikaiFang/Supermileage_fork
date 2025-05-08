@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-:root {
+@import "../css/navbar.css";
+@import "../css/timeline.css";
+
+/* :root {
   --background: #ffffff;
   --foreground: #ffffff;
 }
@@ -12,36 +15,9 @@
   --font-mono: var(--font-geist-mono);
 } */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
     --foreground: #ffffff;
   }
-}
-
-.social-buttons {
-  margin-bottom: 0;
-  li {
-    a {
-      font-size: 20px;
-      line-height: 50px;
-      display: block;
-      width: 50px;
-      height: 50px;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-      color: white;
-      border-radius: 100%;
-      outline: none;
-    }
-  }
-}
-
-.navbar {
-  transition: background-color 0.3s ease;
-}
-
-.navbar.transparent {
-  background-color: transparent;
-}
+} */

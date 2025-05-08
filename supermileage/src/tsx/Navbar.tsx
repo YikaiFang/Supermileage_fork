@@ -60,12 +60,13 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
           aria-expanded="true"
           aria-label="Toggle navigation"
         >
+          <i className="fas fa-bars"></i>
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="navbar-collapse" id="navbarToggleExternalContent">
           <ul className="navbar-nav text-uppercase ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="/sections/about">About</a>
+              <a className="nav-link white" href="/sections/about">About</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/sections/competition">Competition</a>
