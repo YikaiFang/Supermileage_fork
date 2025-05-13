@@ -75,9 +75,6 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
               <a className="nav-link" href="/sections/blog">Blog</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/sections/contact">Contact</a>
-            </li>
-            <li className="nav-item">
               <a className="nav-link" href="/sections/join">Join</a>
             </li>
             <li className="nav-item">

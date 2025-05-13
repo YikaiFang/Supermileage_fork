@@ -1,0 +1,91 @@
+import Footer from "tsx/Footer";
+import Header from "tsx/Header";
+import Results from "tsx/Results";
+
+export default function Competition() {
+    return (
+        
+        <div>
+            <Header/>
+            <header
+                className="relative h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
+                style={{ backgroundImage: "url('/media/images/comp.jpg')" }}
+            >
+                <div className="absolute inset-0 bottom-50 bg-gradient-to-b from-black/100 via-black/45 to-transparent"></div>
+                <h1 className="relative z-10 text-6xl font-bold text-white drop-shadow-lg">
+                    COMPETITION
+                </h1>
+            </header>
+            <section className="bg-light page-section">
+  <div className="container">
+    <div className="row">
+      <div className="col-lg-12">
+        <h2 className="section-heading text-uppercase">Competitions</h2>
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-md-4">
+        <h4 className="text-heading">Shell Eco-Marathon Americas</h4>
+        <p className="text-muted">
+          The Shell Eco-marathon Americas competition takes place annually in
+          varying locations year-after-year. The competition was held in
+          Detroit, Michigan from 2015 to 2017 and in Sonoma, California from
+          2018 to 2019. Roughly 100 teams from Canada, the United States,
+          Central America, and South America gather to put their vehicles to an
+          efficiency marathon. All three vehicles have competed in the 
+          Shell Eco-marathon Americas, with the gasoline Prototype winning 2nd place in 
+          2019 with 1372 miles per gallon. Our Urban Concept won second place in 2015 
+          with 325 miles per gallon.
+        </p>
+      </div>
+      <div className="col-md-4">
+        <h4 className="text-heading">SAE Supermileage</h4>
+        <p className="text-muted">
+          The SAE Supermileage competition takes place annually in Marshall,
+          Michigan during the second weekend in June. Teams from across North
+          America compete their vehicles at the Eaton Vehicle Group Proving
+          Grounds and try to set new records for efficiency. Our Gasoline Prototype
+          vehicle participates in the SAE Supermileage competition, and scored
+          third in 2018 with 1407 miles per gallon, second place in 2019 with
+          2229 miles per gallon, and second place again in 2022 with 1038 
+          miles per gallon.
+        </p>
+      </div>
+      <div className="col-md-4">
+        <h4 className="text-heading">CSQ Supermileage</h4>
+        <p className="text-muted">
+          The Competition Supermileage Quebec competition is a new competition that began at Laval University in June 2023. Teams from across North
+          America compete their vehicles in a lengthy endurance race with the goal of earning both a high mileage covered as well as a good fuel efficiency. Our Gasoline Prototype and Battery Electric Urban Concept
+          vehicles participated in this recently, and earned best overall fuel efficiency, second best mileage, and third place overall at competition
+        </p>
+      </div>
+    </div>
+    <div className="row">
+      <h4 className="text-heading">Competition Recap Videos</h4>
+    </div>
+    <div className="row">
+      <div className="col-md-6">
+        <h4 className="text-heading">SEMA 2022</h4>
+        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/sDIXUzXXdRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-md-6">
+        <h4 className="text-heading">SAE Supermileage 2022</h4>
+        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/BpAHCDXtzwI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-md-6">
+        <h4 className="text-heading">SEMA 2023</h4>
+        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/tXJEfLMXgHw?si=xy9Rsq4d7VjYNeNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+      </div>
+    </div>
+    
+  </div>
+  </section>
+  <Results/>
+  <Footer/>
+        </div>
+    );
+};

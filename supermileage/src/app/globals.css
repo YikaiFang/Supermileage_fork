@@ -2,22 +2,4 @@
 
 @import "../css/navbar.css";
 @import "../css/timeline.css";
-
-/* :root {
-  --background: #ffffff;
-  --foreground: #ffffff;
-}
-
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #ffffff;
-  }
-} */
+@import "../css/footer.css";
