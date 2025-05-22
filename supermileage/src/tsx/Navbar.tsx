@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from "react";
-  
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 interface NavBarProps {
   imageSrcPath: string;
 }
 
-const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
+const Navbar: React.FC<NavBarProps> = ({ imageSrcPath }) => {
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
@@ -17,42 +18,35 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
     );
 
     const handleScroll = () => {
-      if (window.scrollY > 200) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
+      setScrolling(window.scrollY > 50);
     };
 
-    if (typeof window !== "undefined") {
-      setScrolling(window.scrollY > 200);
-      window.addEventListener("scroll", handleScroll);
-    }
-
-    return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("scroll", handleScroll);
-      }
-    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolling ? "bg-dark" : "navbar-transparent"}`}>
+    <nav
+      className={`navbar navbar-expand-lg fixed-top transition-all duration-300 ease-in-out ${
+        scrolling
+          ? "bg-blue-900 shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container">
-        <a className="navbar-brand" href="/">
-          <div className="logo-container">
-            <Image
-              src={imageSrcPath}
-              width="200"
-              height="200"
-              className="d-inline-block align-center"
-              alt="Brand Logo"
-            />
-          </div>
+        <a className="navbar-brand flex items-center gap-2" href="/">
+          <Image
+            src={imageSrcPath}
+            width={150}
+            height={150}
+            alt="UBC Supermileage Logo"
+            className="d-inline-block align-middle"
+            priority
+          />
         </a>
 
         <button
-          className="navbar-toggler navbar-dark"
+          className="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarToggleExternalContent"
@@ -60,32 +54,33 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
           aria-expanded="true"
           aria-label="Toggle navigation"
         >
-          <i className="fas fa-bars"></i>
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" />
         </button>
-        <div className="navbar-collapse" id="navbarToggleExternalContent">
-          <ul className="navbar-nav text-uppercase ml-auto">
-            <li className="nav-item">
-              <a className="nav-link white" href="/sections/about">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/sections/competition">Competition</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/sections/blog">Blog</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/sections/join">Join</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="/sections/sponsor">Sponsor</a>
-            </li>
+
+        <div className="collapse navbar-collapse justify-end" id="navbarSupportedContent">
+          <ul className="navbar-nav text-uppercase gap-2">
+            {[
+              ["About", "/sections/about"],
+              ["Competition", "/sections/competition"],
+              ["Blog", "/sections/blog"],
+              ["Contact", "/sections/contact"],
+              ["Join", "/sections/join"],
+              ["Sponsor", "/sections/sponsor"],
+            ].map(([title, href]) => (
+              <li className="nav-item" key={title}>
+                <a
+                  className="nav-link text-white hover:text-gray-300 transition"
+                  href={href}
+                >
+                  {title}
+                </a>
+              </li>
+            ))}
           </ul>
-        </div> 
+        </div>
       </div>
     </nav>
   );
 };
 
 export default Navbar;
-
