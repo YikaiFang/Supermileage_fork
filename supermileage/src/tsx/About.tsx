@@ -5,8 +5,8 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-10">
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Who are we?</h2>
-              <p className="text-gray-600">
+              <h2 className="text-2xl font-semibold mb-4 font-header">Who are we?</h2>
+              <p className="text-gray-600 font-text">
                 The UBC Supermileage team is a group of 50 dedicated engineering students working to design and build ultra-efficient gasoline-powered vehicles for the Shell Eco-marathon and SAE competitions. We bring together talent from a wide array of engineering disciplines and beyond.
               </p>
             </div>

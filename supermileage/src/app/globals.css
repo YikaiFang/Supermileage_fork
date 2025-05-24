@@ -1,13 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
+@import "bootstrap/dist/css/bootstrap.min.css";
 @import "../css/navbar.css";
 @import "../css/timeline.css";
 @import "../css/footer.css";
+@import "../css/modal.css";
 
 :root {
     --font-figtree: 'Figtree', sans-serif;
     --font-text: var(--font-figtree);
     --font-header: var(--font-figtree);
-  }
+}
 
-@import "../css/modal.css"
+/* Override Bootstrap's font settings */
+body {
+    font-family: var(--font-figtree) !important;
+}
+
+/* Ensure all text elements use Figtree */
+h1, h2, h3, h4, h5, h6, p, span, a, li, button, input, textarea, select {
+    font-family: var(--font-figtree) !important;
+}
+
+/* Override Bootstrap's specific classes */
+.navbar, .nav-link, .btn, .form-control, .form-label {
+    font-family: var(--font-figtree) !important;
+}
+
+/* Rest of your existing styles */ 
