@@ -9,9 +9,9 @@ const cars = [
 
 export default function Cars() {
   return (
-    <section className="bg-gray-100 py-20" id="cars">
+    <section className="bg-gray-100 py-10" id="cars">
       <div className="max-w-6xl mx-auto text-center px-4">
-        <h2 className="text-3xl font-bold uppercase mb-12">Our Cars</h2>
+        <h2 className="text-3xl font-bold uppercase pb-6">Our Cars</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {cars.map(({ name, img, modal }) => (
             <div key={name} className="relative group">

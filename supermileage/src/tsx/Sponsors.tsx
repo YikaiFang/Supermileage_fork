@@ -2,14 +2,14 @@
 const tiers = {
     Platinum: ["dff.png", "UBC PAF.png"],
     Gold: ["Transoft Solutions.png", "infrastructure safety solutions.png"],
-    Silver: ["UBC MECH.png", "SCCBC.png", "UBC AMS.jpg", "Solas Energy.png", "Zaber.jpg"], // add UBC AMS, Solas, Zaber
+    Silver: ["UBC MECH.png", "SCCBC.png", "UBC AMS.jpg", "Solas Energy.png", "Zaber.jpg"],
     Bronze: ["shell.png", "HTECss.png", "Walter Gage Memorial Fund.png", "UBC ECE.jpg", "Horizon Educational.png"],
     Select: ["SAEBC2.jpg", "core tool.png", "CNCmanu.png", "AVL.png", "enepaq.png", "hy-fcell.png",]
   };
   
   export default function Sponsors() {
     return (
-      <section id="sponsors" className="py-20 bg-white">
+      <section id="sponsors" className="py-10 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold uppercase mb-4">Sponsors</h2>
           <p className="text-gray-500 mb-12">Thank you to all our 2025-2026 sponsors!</p>

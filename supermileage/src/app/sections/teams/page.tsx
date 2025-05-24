@@ -8,7 +8,7 @@ const Teams = () => {
         <Header/>
         <Title imageSrcPath="/media/images/team.jpg" name="TEAMS"/>
         <section className="bg-light page-section" id="modal">
-  <div className="container">
+  <div className="container py-10">
     <div className="row">
       <div className="col-lg-12">
         <h2 className="section-heading text-uppercase">Our Teams</h2>

@@ -1,6 +1,6 @@
 export default function Timeline() {
     return (
-        <div className="pt-12 container">
+        <div className="py-12 container">
         <div className="row">
             <div className="col-lg-12">
                 <h2 className="section-heading text-uppercase">History</h2>
