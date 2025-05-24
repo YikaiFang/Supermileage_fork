@@ -1,11 +1,15 @@
 import Footer from "tsx/Footer";
 import Header from "tsx/Header";
+import Title from "tsx/Title";
 
 const Join = () => {
     return(
       <>
         <Header/>
         <section>
+        {/* <Title imageSrcPath="/media/images/join.jpg" name="JOIN">
+          <a className="relative z-10 btn btn-primary mt-4" href="#join-section">Join Our Team</a>
+        </Title> */}
         <header
           className="relative h-[80vh] flex flex-col items-center justify-center text-center bg-cover bg-center"
           style={{ backgroundImage: "url('/media/images/join.jpg')" }}

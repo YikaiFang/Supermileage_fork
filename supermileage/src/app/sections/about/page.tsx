@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div>
       <Header/>
-      <Title imageSrcPath="/media/images/img_20190403_180711.jpg" name="History"/>
+      <Title imageSrcPath="/media/images/default.jpg" name="ABOUT"/>
       <Timeline/>
       <Footer/>
     </div>
