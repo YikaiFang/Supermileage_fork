@@ -64,21 +64,24 @@ const Navbar: React.FC<NavBarProps> = ({imageSrcPath}) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="navbar-collapse" id="navbarToggleExternalContent">
-          <ul className="navbar-nav text-uppercase ml-auto">
+          <ul className="navbar-nav text-uppercase ml-auto ">
             <li className="nav-item">
-              <a className="nav-link white" href="/sections/about">About</a>
+              <a className="nav-link white text-white" href="/sections/about">About</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/sections/competition">Competition</a>
+              <a className="nav-link text-white" href="/sections/competition">Competition</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/sections/blog">Blog</a>
+              <a className="nav-link text-white" href="/sections/blog">Blog</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/sections/join">Join</a>
+              <a className="nav-link text-white" href="/sections/teams">Teams</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/sections/sponsor">Sponsor</a>
+              <a className="nav-link text-white" href="/sections/join">Join</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link text-white" href="/sections/sponsor">Sponsor</a>
             </li>
           </ul>
         </div> 
