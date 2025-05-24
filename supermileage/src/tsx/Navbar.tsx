@@ -27,7 +27,7 @@ const Navbar: React.FC<NavBarProps> = ({ imageSrcPath }) => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top transition-all duration-300 ease-in-out ${
+      className={`navbar navbar-expand-lg fixed-top transition-all duration-300 ease-in-out z-10000 ${
         scrolling
           ? "bg-blue-900 shadow-lg"
           : "bg-transparent"
@@ -64,6 +64,7 @@ const Navbar: React.FC<NavBarProps> = ({ imageSrcPath }) => {
               ["Competition", "/sections/competition"],
               ["Blog", "/sections/blog"],
               ["Contact", "/sections/contact"],
+              ["Teams", "/sections/teams"],
               ["Join", "/sections/join"],
               ["Sponsor", "/sections/sponsor"],
             ].map(([title, href]) => (
