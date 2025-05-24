@@ -4,7 +4,7 @@ import Socials from './Socials';
 
 export default function Footer() {
     return (
-        <footer className="bg-light footer" style={{ padding: "25px 0",  textAlign: "center" }}>
+        <footer className="bg-light footer" style={{ padding: "36px 0",  textAlign: "center" }}>
             <div className="container align-items-center">
                 <div className="row align-items-center justify-content-between text-center text-md-start">
                     <div className="container">

@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
-
 @import "../css/navbar.css";
 @import "../css/timeline.css";
 @import "../css/footer.css";
+
+:root {
+    --font-figtree: 'Figtree', sans-serif;
+    --font-text: var(--font-figtree);
+    --font-header: var(--font-figtree);
+  }
+
 @import "../css/modal.css"
