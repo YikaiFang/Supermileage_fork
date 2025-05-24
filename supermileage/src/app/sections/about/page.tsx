@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from 'tsx/Footer';
 import Header from 'tsx/Header';
 import Timeline from 'tsx/Timeline';
+import Title from 'tsx/Title';
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
       <Header/>
       <section>
       <header
-        className="relative h-[80vh] flex flex-col items-center justify-center text-center bg-cover bg-center"
+        className="relative h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
         style={{ backgroundImage: "url('/media/images/img_20190403_180711.jpg')" }}
       >
         <div className="absolute inset-0 bottom-50 bg-gradient-to-b from-black/100 via-black/45 to-transparent"></div>
