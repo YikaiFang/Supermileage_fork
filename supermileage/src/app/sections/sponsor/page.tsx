@@ -2,14 +2,14 @@ import Footer from "tsx/Footer";
 import Header from "tsx/Header";
 import Title from "tsx/Title";
 
-const Teams = () => {
+const Sponsors = () => {
   return (
     <div>
         <Header/>
-        <Title imageSrcPath="/media/images/team.jpg" name="TEAMS"/>
+        <Title imageSrcPath="/media/images/contact.jpg" name="SPONSOR"/>
         <Footer/>
     </div>
     );
 }
 
-export default Teams;
+export default Sponsors;
