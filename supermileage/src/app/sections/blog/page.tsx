@@ -1,11 +1,11 @@
 import Footer from "tsx/Footer";
-import Header from "tsx/Header";
+import Navbar from "tsx/Navbar";
 import Title from "tsx/Title";
 
 const Blogs = () => {
   return (
     <div>
-        <Header/>
+        <Navbar/>
         <Title imageSrcPath="/media/images/blog.jpg" name="BLOGS"/>
         <Footer/>
     </div>

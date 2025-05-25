@@ -1,11 +1,11 @@
 import Footer from "tsx/Footer";
-import Header from "tsx/Header";
+import Navbar from "tsx/Navbar";
 import Title from "tsx/Title";
 
 const Teams = () => {
   return (
     <div>
-        <Header/>
+        <Navbar/>
         <Title imageSrcPath="/media/images/team.jpg" name="TEAMS"/>
         <section className="bg-light page-section" id="modal">
   <div className="container py-10">

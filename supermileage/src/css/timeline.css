@@ -93,7 +93,7 @@
     left: -15px;
     border: solid transparent;
     border-width: 15px;
-    border-right-color: #f8f9fa;
+    border-right-color: rgb(38, 81, 160);
   }
   
   .timeline > li.timeline-inverted > .timeline-panel::after {
@@ -103,7 +103,7 @@
     left: -14px;
     border: solid transparent;
     border-width: 14px;
-    border-right-color: white;
+    border-right-color: rgb(38, 81, 160);
   }
   
   .timeline > li:last-child {

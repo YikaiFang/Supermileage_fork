@@ -1,11 +1,11 @@
 import Footer from "tsx/Footer";
-import Header from "tsx/Header";
+import Navbar from "tsx/Navbar";
 import Title from "tsx/Title";
 
 const Join = () => {
     return(
       <>
-        <Header/>
+        <Navbar/>
         <section>
         {/* <Title imageSrcPath="/media/images/join.jpg" name="JOIN">
           <a className="relative z-10 btn btn-primary mt-4" href="#join-section">Join Our Team</a>

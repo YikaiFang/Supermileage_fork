@@ -1,12 +1,12 @@
 import Footer from "tsx/Footer";
-import Header from "tsx/Header";
+import Navbar from "tsx/Navbar";
 import Title from "tsx/Title";
 import { FaHandshake, FaLeaf, FaUsers, FaMicrophone, FaAward, FaTags, FaHeart } from "react-icons/fa";
 
 const Sponsors = () => {
     return (
         <div>
-            <Header />
+            <Navbar />
             <Title imageSrcPath="/media/images/contact.jpg" name="SPONSOR" />
             <section className="bg-light page-section py-10">
                 <div className="container">

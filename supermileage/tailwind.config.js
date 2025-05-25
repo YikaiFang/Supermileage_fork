@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        '1000': '1000',
+      },
       fontFamily: {
         figtree: ['var(--font-figtree)', ...fontFamily.sans],
         sans: ['var(--font-text)', ...fontFamily.sans], // setting default font
