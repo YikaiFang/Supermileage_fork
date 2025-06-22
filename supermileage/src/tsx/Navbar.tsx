@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    setHasMounted(true); // ensure hydration match
+    setHasMounted(true);
 
     const handleScroll = () => {
       setScrolling(window.scrollY > 100);
@@ -23,10 +23,11 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navbarBgClass = !hasMounted || !scrolling ? "bg-transparent" : "bg-blue-950";
+  // Always render with transparent background initially to match SSR
+  const navbarBgClass = hasMounted && scrolling ? "bg-blue-950" : "bg-transparent";
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-1000 transition-colors duration-300 ${navbarBgClass}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${navbarBgClass}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-2">
           <a href="/" className="flex items-center gap-2">
