@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [scrolling, setScrolling] = useState(false);
+  const [scrolling, setScrolling] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
