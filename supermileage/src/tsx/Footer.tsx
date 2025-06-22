@@ -13,7 +13,9 @@ export default function Footer() {
                             <div className="col-md-4 col-12 text-center text-md-start">
                                 <h4>Email</h4>
                                 <p className="text-muted">
-                                <a href="mailto:info@supermileage.ca">info@supermileage.ca</a>
+                                <a href="mailto:info@supermileage.ca" target="_blank" rel="noopener noreferrer">
+                                    info@supermileage.ca
+                                </a>
                                 </p>
                                 <h4>Socials</h4>
                                 <Socials/>
@@ -40,9 +42,6 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div> 
-                    <p className="text-center">Copyright <span className="copyright">&copy;</span> Supermileage 2025 </p>
                 </div>
             </div>
         </footer>

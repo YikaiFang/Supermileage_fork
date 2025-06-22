@@ -52,10 +52,10 @@ const Sponsors = () => {
                                         </p>
                                     </div>
                                     <div className="mt-4">
-                                        <a href="/path/to/sponsorship-package.pdf" className="btn btn-primary me-3" target="_blank" rel="noopener noreferrer">
+                                        <a href="/2024-2025_Sponsor_Pack.pdf" className="btn btn-primary me-3" target="_blank" rel="noopener noreferrer">
                                             View Sponsorship Package
                                         </a>
-                                        <a href="mailto:sponsor@supermileage.ca" className="btn btn-outline-secondary">
+                                        <a href="mailto:sponsor@supermileage.ca" className="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">
                                             Contact Us
                                         </a>
                                     </div>
@@ -77,8 +77,10 @@ const Sponsors = () => {
                         <div className="col-lg-12">
                             <p className="text-muted">
                                 To support UBC Supermileage via a donation, visit <a
-                                    href="https://donate.support.ubc.ca/page/20924/donate/1?transaction.dirgift=UBC+Supermileage+Team%20O961">this
-                                    page</a> to start the process. All donations are greatly appreciated!
+                                href="https://donate.support.ubc.ca/page/20924/donate/1?transaction.dirgift=UBC+Supermileage+Team%20O961" 
+                                target="_blank" rel="noopener noreferrer">
+                                    this page
+                                </a> to start the process. All donations are greatly appreciated!
                             </p>
                         </div>
                     </div>

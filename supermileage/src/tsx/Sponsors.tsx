@@ -25,6 +25,7 @@ const tiers = {
                     className={`h-20 max-w-[150px] object-contain ${
                       src === "infrastructure safety solutions.png" ? "bg-black p-2" : ""
                     }`}
+                    loading="eager"
                   />
                 ))}
               </div>

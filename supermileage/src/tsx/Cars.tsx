@@ -16,7 +16,7 @@ export default function Cars() {
           {cars.map(({ name, img, modal }) => (
             <div key={name} className="relative group">
               <div className="overflow-hidden rounded shadow-md">
-                <Image src={img} alt={name} width={600} height={400} className="w-full h-auto object-cover group-hover:scale-105 transition" />
+                <Image src={img} alt={name} width={600} height={400} className="w-full h-auto object-cover group-hover:scale-105 transition" priority/>
               </div>
               <div className="text-lg font-medium mt-3">{name}</div>
             </div>
