@@ -3,14 +3,18 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [scrolling, setScrolling] = useState(true);
+  const [scrolling, setScrolling] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
+
     const handleScroll = () => {
       setScrolling(window.scrollY > 100);
     };
-    setScrolling(window.scrollY > 100);
+
+    handleScroll(); // check initial position
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
