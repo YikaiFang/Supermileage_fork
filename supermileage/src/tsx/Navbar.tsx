@@ -27,7 +27,7 @@ export default function Navbar() {
   const navbarBgClass = hasMounted && scrolling ? "bg-blue-950" : "bg-transparent";
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${navbarBgClass}`}>
+    <nav className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${navbarBgClass}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-2">
           <a href="/" className="flex items-center gap-2">
@@ -61,7 +61,7 @@ export default function Navbar() {
           </button>
 
           <ul className="hidden lg:flex items-center space-x-8">
-            {["about", "competition", "blog", "teams", "join", "sponsor"].map((section) => (
+            {["about", "competition", "blog", "divisions", "join", "sponsor"].map((section) => (
               <li key={section}>
                 <a
                   className="text-white uppercase hover:text-gray-300 transition-colors duration-200 !no-underline"
@@ -81,7 +81,7 @@ export default function Navbar() {
           id="mobile-menu"
         >
           <ul className="py-2">
-            {["about", "competition", "blog", "teams", "join", "sponsor"].map((section) => (
+            {["about", "competition", "blog", "divisions", "join", "sponsor"].map((section) => (
               <li key={section}>
                 <a
                   className="block text-white uppercase hover:text-gray-300 transition-colors duration-200 py-2 !no-underline"

@@ -9,7 +9,7 @@ export default function Competition() {
         <div>
             <Navbar />
             <Title imageSrcPath="/media/images/comp.jpg" name="Competition" />
-            <section className="bg-light page-section">
+            <section className="bg-white page-section">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -53,23 +53,6 @@ export default function Competition() {
                             </p>
                         </div>
                     </div>
-
-                    <h4 className="text-heading">Competition Recap Videos</h4>
-                    <div className="row">
-                        <div className="col-md-4">
-                            <h5 className="text-heading mt-3">SEMA 2022</h5>
-                            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/sDIXUzXXdRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-                        </div>
-                        <div className="col-md-4">
-                            <h5 className="text-heading mt-3">SAE Supermileage 2022</h5>
-                            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/BpAHCDXtzwI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-                        </div>
-                        <div className="col-md-4">
-                            <h5 className="text-heading mt-3">SEMA 2023</h5>
-                            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/tXJEfLMXgHw?si=xy9Rsq4d7VjYNeNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
-                        </div>
-                    </div>
-
                 </div>
             </section>
             <Results />

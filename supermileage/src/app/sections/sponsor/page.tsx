@@ -8,7 +8,7 @@ const Sponsors = () => {
         <div>
             <Navbar />
             <Title imageSrcPath="/media/images/contact.jpg" name="SPONSOR" />
-            <section className="bg-light page-section py-10">
+            <section className="bg-white page-section py-10">
                 <div className="container">
                     <div className="row mb-5">
                         <div className="col-lg-12 text-center">
@@ -16,9 +16,9 @@ const Sponsors = () => {
                             <div className="mx-auto" style={{ width: 60, height: 4, background: "linear-gradient(90deg, #00c6ff, #0072ff)", borderRadius: 2 }} />
                         </div>
                     </div>
-                    <div className="row g-4 align-items-stretch">
+                    <div className="row g-4 align-items-stretch bg-white">
                         {/* Become a Sponsor Card */}
-                        <div className="col-md-6">
+                        {/* <div className="col-md-6">
                             <div className="card h-100 shadow-sm border-0">
                                 <div className="card-body">
                                     <h4 className="text-heading d-flex align-items-center mb-3">
@@ -38,7 +38,7 @@ const Sponsors = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         {/* Learn More Card */}
                         <div className="col-md-6">
                             <div className="card h-100 shadow-sm border-0">
@@ -48,14 +48,15 @@ const Sponsors = () => {
                                             <FaLeaf className="me-2 text-success" /> Learn More
                                         </h4>
                                         <p className="text-muted">
-                                            With our proven track record and previous media coverage, sponsoring us is a great way to show that your company is helping to support an environmental Canadian student engineering project.
+                                            With our proven track record and previous media coverage, sponsoring us is a great way to show 
+                                            that your company is helping to support an sustainable Canadian student engineering project.
                                         </p>
                                     </div>
                                     <div className="mt-4">
                                         <a href="/2024-2025_Sponsor_Pack.pdf" className="btn btn-primary me-3" target="_blank" rel="noopener noreferrer">
                                             View Sponsorship Package
                                         </a>
-                                        <a href="mailto:sponsor@supermileage.ca" className="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">
+                                        <a href="mailto:info@supermileage.ca" className="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">
                                             Contact Us
                                         </a>
                                     </div>

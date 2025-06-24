@@ -4,7 +4,7 @@ import Footer from "tsx/Footer";
 import Navbar from "tsx/Navbar";
 import Title from "tsx/Title";
 
-const Teams = () => {
+const Divisions = () => {
   const [activeModal, setActiveModal] = useState<string | null>(null);
 
   const openModal = (modalId: string) => {
@@ -18,15 +18,15 @@ const Teams = () => {
   return (
     <div>
       <Navbar/>
-      <Title imageSrcPath="/media/images/team.jpg" name="TEAMS"/>
+      <Title imageSrcPath="/media/images/team.jpg" name="DIVISIONS"/>
       
-      {/* Our Teams Section */}
-      <section className="bg-gray-100 py-20" id="modal">
+      {/* Our Divisions Section */}
+      <section className="bg-white py-20" id="modal">
         <div className="container mx-auto px-4 py-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 uppercase mb-4">Our Teams</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 uppercase mb-4">Our Divisions</h2>
             <h3 className="text-xl text-gray-600">
-              Learn more about the teams at Supermileage.
+              Learn more about the divisions at UBC Supermileage.
             </h3>
           </div>
           
@@ -314,4 +314,4 @@ const Teams = () => {
   );
 }
 
-export default Teams;
+export default Divisions;
