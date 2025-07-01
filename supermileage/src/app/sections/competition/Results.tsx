@@ -1,6 +1,6 @@
 export default function Results() {
     return (
-      <section className="bg-light page-section">
+      <section className="bg-white page-section">
         <div className="container">
           <div className="row mb-4">
             <div className="col-lg-12">

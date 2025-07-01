@@ -5,10 +5,10 @@ import Title from "tsx/Title";
 
 export default function Competition() {
     return (
-        <div className="bg-light min-h-screen">
+        <div className="bg-white min-h-screen">
             <Navbar />
             <Title imageSrcPath="/media/images/comp.jpg" name="Competition" />
-            <section className="bg-light page-section pb-0">
+            <section className="bg-white page-section pb-0">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -52,7 +52,7 @@ export default function Competition() {
             <Results />
             <div className="my-16" />
             {/* Past Events Section */}
-            <section className="bg-light page-section pt-0 pb-16">
+            <section className="bg-white page-section pt-0 pb-16">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
