@@ -1,4 +1,6 @@
 // components/Sponsors.tsx
+import Image from 'next/image';
+
 const tiers = {
     Platinum: ["dff.png", "UBC PAF.png"],
     Gold: ["Transoft Solutions.png", "infrastructure safety solutions.png"],
@@ -18,13 +20,16 @@ const tiers = {
               <h3 className="text-xl font-semibold uppercase mb-4">{tier} Tier</h3>
               <div className="flex flex-wrap justify-center items-center gap-6">
                 {logos.map((src, i) => (
-                  <img 
-                    key={i} 
-                    src={`/media/images/${src}`} 
-                    alt={`${tier} sponsor`} 
+                  <Image
+                    key={i}
+                    src={`/media/images/${src}`}
+                    alt={`${tier} sponsor`}
                     className={`h-20 max-w-[150px] object-contain ${
                       src === "infrastructure safety solutions.png" ? "bg-black p-2" : ""
                     }`}
+                    width={150}
+                    height={80}
+                    priority
                   />
                 ))}
               </div>

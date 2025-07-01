@@ -3,6 +3,7 @@ import { useState } from "react";
 import Footer from "tsx/Footer";
 import Navbar from "tsx/Navbar";
 import Title from "tsx/Title";
+import Image from 'next/image';
 
 const Teams = () => {
   const [activeModal, setActiveModal] = useState<string | null>(null);
@@ -42,7 +43,14 @@ const Teams = () => {
                     Learn More
                   </div>
                 </div>
-                <img className="w-full h-64 object-cover" src="/media/images/vehicle mechanics photo.jpg" alt="" />
+                <Image
+                  className="w-full h-64 object-cover"
+                  src="/media/images/vehicle mechanics photo.jpg"
+                  alt="Vehicle Mechanics"
+                  width={400}
+                  height={256}
+                  priority
+                />
               </a>
               <div className="text-center mt-4">
                 <h4 className="text-xl font-semibold text-gray-800">Vehicle Mechanics</h4>
@@ -60,7 +68,14 @@ const Teams = () => {
                     Learn More
                   </div>
                 </div>
-                <img className="w-full h-64 object-cover" src="/media/images/electrical division photo.jpg" alt="" />
+                <Image
+                  className="w-full h-64 object-cover"
+                  src="/media/images/electrical division photo.jpg"
+                  alt="Electrical Division"
+                  width={400}
+                  height={256}
+                  priority
+                />
               </a>
               <div className="text-center mt-4">
                 <h4 className="text-xl font-semibold text-gray-800">Electrical</h4>
@@ -78,7 +93,14 @@ const Teams = () => {
                     Learn More
                   </div>
                 </div>
-                <img className="w-full h-64 object-cover" src="/media/images/powertrain division photo.jpg" alt="" />
+                <Image
+                  className="w-full h-64 object-cover"
+                  src="/media/images/powertrain division photo.jpg"
+                  alt="Powertrain Division"
+                  width={400}
+                  height={256}
+                  priority
+                />
               </a>
               <div className="text-center mt-4">
                 <h4 className="text-xl font-semibold text-gray-800">Powertrain</h4>

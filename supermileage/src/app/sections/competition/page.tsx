@@ -5,21 +5,20 @@ import Title from "tsx/Title";
 
 export default function Competition() {
     return (
-
-        <div>
+        <div className="bg-light min-h-screen">
             <Navbar />
             <Title imageSrcPath="/media/images/comp.jpg" name="Competition" />
-            <section className="bg-light page-section">
+            <section className="bg-light page-section pb-0">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2 className="section-heading text-uppercase pt-12">Competitions</h2>
+                            <h2 className="section-heading text-uppercase pt-12 mb-6">Competitions</h2>
                         </div>
                     </div>
-                    <div className="row mb-5">
-                        <div className="col-md-4">
-                            <h4 className="text-heading">Shell Eco-Marathon Americas</h4>
-                            <p className="text-muted">
+                    <div className="row mb-8">
+                        <div className="col-md-8 mx-auto">
+                            <h4 className="text-heading mb-3">Shell Eco-Marathon Americas</h4>
+                            <p className="text-muted mb-0">
                                 The Shell Eco-marathon Americas competition takes place annually in
                                 varying locations year-after-year. The competition was held in
                                 Detroit, Michigan from 2015 to 2017 and in Sonoma, California from
@@ -31,31 +30,9 @@ export default function Competition() {
                                 with 325 miles per gallon.
                             </p>
                         </div>
-                        <div className="col-md-4">
-                            <h4 className="text-heading">SAE Supermileage</h4>
-                            <p className="text-muted">
-                                The SAE Supermileage competition takes place annually in Marshall,
-                                Michigan during the second weekend in June. Teams from across North
-                                America compete their vehicles at the Eaton Vehicle Group Proving
-                                Grounds and try to set new records for efficiency. Our Gasoline Prototype
-                                vehicle participates in the SAE Supermileage competition, and scored
-                                third in 2018 with 1407 miles per gallon, second place in 2019 with
-                                2229 miles per gallon, and second place again in 2022 with 1038
-                                miles per gallon.
-                            </p>
-                        </div>
-                        <div className="col-md-4">
-                            <h4 className="text-heading">CSQ Supermileage</h4>
-                            <p className="text-muted">
-                                The Competition Supermileage Quebec competition is a new competition that began at Laval University in June 2023. Teams from across North
-                                America compete their vehicles in a lengthy endurance race with the goal of earning both a high mileage covered as well as a good fuel efficiency. Our Gasoline Prototype and Battery Electric Urban Concept
-                                vehicles participated in this recently, and earned best overall fuel efficiency, second best mileage, and third place overall at competition
-                            </p>
-                        </div>
                     </div>
-
-                    <h4 className="text-heading">Competition Recap Videos</h4>
-                    <div className="row">
+                    <h4 className="text-heading mt-10 mb-4">Competition Recap Videos</h4>
+                    <div className="row mb-8">
                         <div className="col-md-4">
                             <h5 className="text-heading mt-3">SEMA 2022</h5>
                             {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/sDIXUzXXdRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
@@ -69,10 +46,45 @@ export default function Competition() {
                             {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/tXJEfLMXgHw?si=xy9Rsq4d7VjYNeNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                         </div>
                     </div>
-
                 </div>
             </section>
+            <div className="my-16" />
             <Results />
+            <div className="my-16" />
+            {/* Past Events Section */}
+            <section className="bg-light page-section pt-0 pb-16">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <h2 className="section-heading text-uppercase mt-10 mb-6">Past Events</h2>
+                        </div>
+                    </div>
+                    <div className="row mb-5">
+                        <div className="col-md-6 mb-6">
+                            <h4 className="text-heading mb-2">SAE Supermileage</h4>
+                            <p className="text-muted">
+                                The SAE Supermileage competition takes place annually in Marshall,
+                                Michigan during the second weekend in June. Teams from across North
+                                America compete their vehicles at the Eaton Vehicle Group Proving
+                                Grounds and try to set new records for efficiency. Our Gasoline Prototype
+                                vehicle participates in the SAE Supermileage competition, and scored
+                                third in 2018 with 1407 miles per gallon, second place in 2019 with
+                                2229 miles per gallon, and second place again in 2022 with 1038
+                                miles per gallon.
+                            </p>
+                        </div>
+                        <div className="col-md-6 mb-6">
+                            <h4 className="text-heading mb-2">CSQ Supermileage</h4>
+                            <p className="text-muted">
+                                The Competition Supermileage Quebec competition is a new competition that began at Laval University in June 2023. Teams from across North
+                                America compete their vehicles in a lengthy endurance race with the goal of earning both a high mileage covered as well as a good fuel efficiency. Our Gasoline Prototype and Battery Electric Urban Concept
+                                vehicles participated in this recently, and earned best overall fuel efficiency, second best mileage, and third place overall at competition
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div className="my-16" />
             <Footer />
         </div>
     );

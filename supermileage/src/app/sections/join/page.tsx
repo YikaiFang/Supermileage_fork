@@ -1,6 +1,7 @@
 import Footer from "tsx/Footer";
 import Navbar from "tsx/Navbar";
 import Title from "tsx/Title";
+import Image from 'next/image';
 
 const Join = () => {
     return(
@@ -58,10 +59,13 @@ const Join = () => {
               </div>
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                  <img 
-                    src="/media/images/team.jpg" 
-                    alt="Supermileage Team" 
+                  <Image
+                    src="/media/images/team.jpg"
+                    alt="Supermileage Team"
                     className="w-full h-full object-cover"
+                    width={600}
+                    height={600}
+                    priority
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
