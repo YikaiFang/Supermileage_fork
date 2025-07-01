@@ -1,12 +1,10 @@
 import Footer from "tsx/Footer";
-import Navbar from "tsx/Navbar";
 import Results from "app/sections/competition/Results";
 import Title from "tsx/Title";
 
 export default function Competition() {
     return (
         <div className="bg-white min-h-screen">
-            <Navbar />
             <Title imageSrcPath="/media/images/comp.jpg" name="Competition" />
             <section className="bg-white page-section pb-0">
                 <div className="container">

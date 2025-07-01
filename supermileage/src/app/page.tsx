@@ -1,5 +1,4 @@
 "use client"
-import Navbar from "tsx/Navbar";
 import Footer from "tsx/Footer";
 import Hero from "tsx/Hero";
 import About from "tsx/About";
@@ -11,7 +10,6 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar/>
       <Hero/>
       <section>
         <main id="main">

@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Footer from "tsx/Footer";
-import Navbar from "tsx/Navbar";
 import Title from "tsx/Title";
 import Image from 'next/image';
 
@@ -18,7 +17,6 @@ const Divisions = () => {
 
   return (
     <div>
-      <Navbar/>
       <Title imageSrcPath="/media/images/team.jpg" name="DIVISIONS"/>
       
       {/* Our Divisions Section */}

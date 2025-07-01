@@ -3,23 +3,17 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [scrolling, setScrolling] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.scrollY > 100;
-    }
-    return false;
-  });
-  const [hasMounted, setHasMounted] = useState(false);
+  // Track whether the page is scrolled past 100-px. Start as `false` on both
+  // server and client to avoid any hydration mismatch; update once mounted.
+  const [scrolling, setScrolling] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    setHasMounted(true);
-
     const handleScroll = () => {
       setScrolling(window.scrollY > 100);
     };
 
-    handleScroll(); // check on mount
+    handleScroll(); // initialise once mounted
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -29,7 +23,7 @@ export default function Navbar() {
   };
 
   // Always render with transparent background initially to match SSR
-  const navbarBgClass = hasMounted && scrolling ? "bg-blue-950" : "bg-transparent";
+  const navbarBgClass = scrolling ? "bg-blue-950" : "bg-transparent";
 
   return (
     <nav className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${navbarBgClass}`}>
