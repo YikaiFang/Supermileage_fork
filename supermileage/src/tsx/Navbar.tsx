@@ -9,13 +9,17 @@ export default function Navbar() {
     }
     return false;
   });
+  const [hasMounted, setHasMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
+
     const handleScroll = () => {
       setScrolling(window.scrollY > 100);
     };
-    setScrolling(window.scrollY > 100);
+
+    handleScroll(); // check on mount
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -24,15 +28,13 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Always render with transparent background initially to match SSR
+  const navbarBgClass = hasMounted && scrolling ? "bg-blue-950" : "bg-transparent";
+
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-1000 transition-colors duration-300 ${
-        scrolling ? "bg-blue-950" : "bg-transparent"
-      }`}
-    >
+    <nav className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${navbarBgClass}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-2">
-          {/* Logo */}
           <a href="/" className="flex items-center gap-2">
             <div className="flex items-center">
               <Image
@@ -46,20 +48,14 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Mobile menu button */}
           <button
-            className="lg:hidden text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-950 rounded-md p-2"
+            className="lg:hidden text-white focus:outline-none rounded-md p-2"
             onClick={toggleMenu}
             aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
             aria-label="Toggle navigation"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -69,121 +65,38 @@ export default function Navbar() {
             </svg>
           </button>
 
-          {/* Desktop Navigation */}
           <ul className="hidden lg:flex items-center space-x-8">
-            <li>
-              <a 
-                className="text-white !no-underline uppercase hover:text-gray-300 transition-colors duration-200" 
-                href="/sections/about"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a 
-                className="text-white !no-underline uppercase hover:text-gray-300 transition-colors duration-200" 
-                href="/sections/competition"
-              >
-                Competition
-              </a>
-            </li>
-            <li>
-              <a 
-                className="text-white !no-underline uppercase hover:text-gray-300 transition-colors duration-200" 
-                href="/sections/blog"
-              >
-                Blog
-              </a>
-            </li>
-            <li>
-              <a 
-                className="text-white !no-underline uppercase hover:text-gray-300 transition-colors duration-200" 
-                href="/sections/teams"
-              >
-                Teams
-              </a>
-            </li>
-            <li>
-              <a 
-                className="text-white !no-underline uppercase hover:text-gray-300 transition-colors duration-200" 
-                href="/sections/join"
-              >
-                Join
-              </a>
-            </li>
-            <li>
-              <a 
-                className="text-white !no-underline uppercase hover:text-gray-300 transition-colors duration-200" 
-                href="/sections/sponsor"
-              >
-                Sponsor
-              </a>
-            </li>
+            {["about", "competition", "blog", "divisions", "join", "sponsor"].map((section) => (
+              <li key={section}>
+                <a
+                  className="text-white uppercase hover:text-gray-300 transition-colors duration-200 !no-underline"
+                  href={`/sections/${section}`}
+                >
+                  {section}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Mobile Navigation */}
-        <div 
-          className={`lg:hidden !no-underline overflow-hidden transition-all duration-300 ease-in-out ${
+        <div
+          className={`lg:hidden transition-all duration-300 ease-in-out ${
             isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
           }`}
           id="mobile-menu"
         >
           <ul className="py-2">
-            <li>
-              <a 
-                className="block text-white !no-underline uppercase hover:text-gray-300 transition-colors duration-200 py-2" 
-                href="/sections/about"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a 
-                className="block !no-underline text-white uppercase hover:text-gray-300 transition-colors duration-200 py-2" 
-                href="/sections/competition"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Competition
-              </a>
-            </li>
-            <li>
-              <a 
-                className="block !no-underline text-white uppercase hover:text-gray-300 transition-colors duration-200 py-2" 
-                href="/sections/blog"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </a>
-            </li>
-            <li>
-              <a 
-                className="block !no-underline text-white uppercase hover:text-gray-300 transition-colors duration-200 py-2" 
-                href="/sections/teams"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Teams
-              </a>
-            </li>
-            <li>
-              <a 
-                className="block !no-underline text-white uppercase hover:text-gray-300 transition-colors duration-200 py-2" 
-                href="/sections/join"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Join
-              </a>
-            </li>
-            <li>
-              <a 
-                className="block !no-underline text-white uppercase hover:text-gray-300 transition-colors duration-200 py-2" 
-                href="/sections/sponsor"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Sponsor
-              </a>
-            </li>
+            {["about", "competition", "blog", "divisions", "join", "sponsor"].map((section) => (
+              <li key={section}>
+                <a
+                  className="block text-white uppercase hover:text-gray-300 transition-colors duration-200 py-2 !no-underline"
+                  href={`/sections/${section}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {section}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

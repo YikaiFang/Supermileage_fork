@@ -15,7 +15,7 @@ export default function Title({ imageSrcPath, name }: TitleProps): JSX.Element {
         >
             <div className="absolute inset-0 bottom-70 bg-gradient-to-b from-black/100 via-black/50 to-transparent"></div>
             <h1 
-                className="relative z-10 text-6xl font-bold text-white"
+                className="relative text-6xl font-bold text-white"
                 style={{filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.3)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.8))'}}
             >
                 {name}

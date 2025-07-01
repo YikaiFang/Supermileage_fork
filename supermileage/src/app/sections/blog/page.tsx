@@ -15,8 +15,8 @@ const Blogs = () => {
     <div>
       <Navbar />
       <Title imageSrcPath="/media/images/blog.jpg" name="BLOGS" />
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <InstagramEmbed url="https://www.instagram.com/ubcsupermileage/" width={328} />
+      <div style={{ display: 'flex', justifyContent: 'center' }} className="xl">
+        <InstagramEmbed url="https://www.instagram.com/p/DGwFNeApjm-/?img_index=1" style={{ width: "35%"}} />
       </div>
       <Footer />
     </div>

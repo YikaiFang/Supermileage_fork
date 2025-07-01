@@ -13,9 +13,9 @@ export default function Home() {
     <div>
       <Navbar/>
       <Hero/>
-      <section id="start">
+      <section>
         <main id="main">
-          <section id="about">
+          <section id="start" className="page-section py-20">
             <About />
           </section>
 
