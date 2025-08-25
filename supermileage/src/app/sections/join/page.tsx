@@ -1,5 +1,4 @@
 import Footer from "tsx/Footer";
-import Title from "tsx/Title";
 import Image from 'next/image';
 
 const Join = () => {
@@ -14,7 +13,7 @@ const Join = () => {
             <h1 className="relative z-10 text-6xl font-bold text-white drop-shadow-lg">
               JOIN
             </h1>
-            <a className="relative z-10 btn btn-primary mt-4 js-scroll-trigger" href="#join-section">Join Our Team</a>
+            <a className="relative z-10 btn btn-primary mt-4 js-scroll-trigger" href="#apply">Join Our Team</a>
           </header>
         </section>
         
@@ -53,6 +52,25 @@ const Join = () => {
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section id="apply" className="py-15 px-4 scroll-mt-32">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1>Apply Now</h1>
+            <p className="text-gray-700 text-lg leading-relaxed mb-8">
+              Apply using the following link: 
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSezd4fpGJLxnHM86Ll7t6gt6lJgoV68TyxBrOIHMKbKe3enfA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="text-primary underline ml-2"> 
+                Application Form
+              </a>
+            </p>
+            <div className="object-center flex justify-center my-8">
+              <Image 
+                src="/media/images/applicationqr.png" 
+                alt="qrcode" 
+                className="w-1/5 h-1/5 object-center" 
+                width={100} 
+                height={100}/>
             </div>
           </div>
         </section>
