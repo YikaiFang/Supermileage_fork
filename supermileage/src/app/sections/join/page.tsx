@@ -1,5 +1,4 @@
 import Footer from "tsx/Footer";
-import Title from "tsx/Title";
 import Image from 'next/image';
 
 const Join = () => {
@@ -14,7 +13,7 @@ const Join = () => {
             <h1 className="relative z-10 text-6xl font-bold text-white drop-shadow-lg">
               JOIN
             </h1>
-            <a className="relative z-10 btn btn-primary mt-4 js-scroll-trigger" href="#join-section">Join Our Team</a>
+            <a className="relative z-10 btn btn-primary mt-4 js-scroll-trigger" href="#apply">Join Our Team</a>
           </header>
         </section>
         
