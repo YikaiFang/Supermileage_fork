@@ -74,7 +74,6 @@ const Join = () => {
             </div>
           </div>
         </section>
-
         <Footer/>
       </>
     )
